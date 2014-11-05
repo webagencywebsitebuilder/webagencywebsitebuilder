@@ -1,0 +1,54 @@
+RewriteEngine Off
+RewriteEngine On
+RewriteRule ^website-detail$ site_detail/edit.php
+RewriteRule ^business-photos$ main_gallery/images.php
+RewriteRule ^logout$ logout.php
+
+RewriteRule ^add-page$ pages/pages.php?action=add
+RewriteRule ^modify-page/(.*)$  pages/pages.php?id_pages=$1&action=modify
+RewriteRule ^page/(.*)/(.*)/(.*)$ pages/pages.php?action=$2&id_pages=$1&monhash=$3
+RewriteRule ^page/list$ pages/index.php
+
+
+RewriteRule ^add-blog$ blog/blog.php?action=add
+RewriteRule ^modify-blog/(.*)$  blog/blog.php?id_blog=$1&action=modify
+RewriteRule ^blog/(.*)/(.*)/(.*)$ blog/blog.php?action=$2&id_blog=$1&monhash=$3
+RewriteRule ^blog/list$ blog/index.php
+
+
+RewriteRule ^add-jobs$ jobs/jobs.php?action=add
+RewriteRule ^modify-jobs/(.*)$  jobs/jobs.php?id_jobs=$1&action=modify
+RewriteRule ^jobs/(.*)/(.*)/(.*)$ jobs/jobs.php?action=$2&id_jobs=$1&monhash=$3
+RewriteRule ^jobs/list$ jobs/index.php
+
+
+
+RewriteRule ^add-category$ categories/categories.php?action=add
+RewriteRule ^modify-category/(.*)$  categories/categories.php?id_categories=$1&action=modify
+RewriteRule ^category/(.*)/(.*)/(.*)$ categories/categories.php?action=$2&id_categories=$1&monhash=$3
+RewriteRule ^categories/list$ categories/index.php
+
+
+RewriteRule ^reply-to-mail/(.*)$  contact/reply.php?id_requests=$1&action=reply
+RewriteRule ^request/(.*)/(.*)/(.*)$ contact/reply.php?action=$2&id_requests=$1&monhash=$3
+RewriteRule ^requests$ contact/index.php
+
+RewriteRule ^add-album$ photos_gallery/album.php?&action=add
+RewriteRule ^modify-album/(.*)$ photos_gallery/album.php?id_album=$1&action=modify
+RewriteRule ^add-image-to-album/(.*)$ photos_gallery/images.php?id_album=$1
+RewriteRule ^album/(.*)/(.*)/(.*)$ photos_gallery/album.php?action=$2&id_album=$1&monhash=$3
+
+RewriteRule ^add-album$ photos_gallery/album.php?&action=add
+RewriteRule ^modify-album/(.*)$ photos_gallery/album.php?id_album=$1&action=modify
+RewriteRule ^add-image-to-album/(.*)$ photos_gallery/images.php?id_album=$1
+RewriteRule ^album/(.*)/(.*)/(.*)$ photos_gallery/album.php?action=$2&id_album=$1&monhash=$3
+RewriteRule ^albums$ photos_gallery/index.php
+
+RewriteRule ^product_categories$ product/index.php
+RewriteRule ^add-product-category$ product/categories.php?action=add
+RewriteRule ^modify-product-category/(.*)$ product/categories.php?id_product_categories=$1&action=modify
+RewriteRule ^product-category/(.*)$ product/list_of_products.php?id_product_categories=$1&action=modify
+RewriteRule ^action-product-category/(.*)/(.*)/(.*)$ product/categories.php?id_product_categories=$1&action=$2&monhash=$3
+RewriteRule ^add-product/(.*)$ product/product.php?&id_product_categories=$1&action=add
+RewriteRule ^modify-product/(.*)/(.*)$ product/product_modify.php?id_product_categories=$1&action=modify&id_product=$2
+RewriteRule ^action-product/(.*)/(.*)/(.*)/(.*)$ product/product_modify.php?id_product_categories=$1&action=$3&id_product=$2&monhash=$4

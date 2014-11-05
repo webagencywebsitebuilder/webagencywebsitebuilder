@@ -1,0 +1,23 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/about_us/(.*)/(.*)$ business_page.php?permalink=$1&id_pages=$2
+RewriteRule ^(.*)/jobs/(.*)/(.*)$ business_jobs.php?permalink=$1&id_jobs=$2
+RewriteRule ^cat/(.*)/(.*)$ about-us.php?id_categories=$1
+RewriteRule ^confirm/(.*)/(.*)$ confirm.php?businesshash=$1&id_business=$2
+RewriteRule ^(.*)/sitemap.xml$ business_sitemap.php?permalink=$1
+RewriteRule ^(.*)/album/(.*)/(.*)$ business_album.php?permalink=$1&id_album=$2 [L]
+RewriteRule ^(.*)/image_gallery$ business_image_gallery.php?permalink=$1 [L]
+
+RewriteRule ^forgotten_password$ forgotten_password.php
+RewriteRule ^about-us$ about-us.php
+RewriteRule ^contact-us$ contact_us.php
+RewriteRule ^register$ register.php
+RewriteRule ^thank-you$ thank-you.php
+RewriteRule ^admin/$ admin/index.php
+RewriteRule ^admin/logout$ admin/logout.php
+
+RewriteRule ^(.*)/contact_us$ business_contact.php?permalink=$1
+
+RewriteRule ^(.*)/$  business_detail.php?permalink=$1 [L]
+#RewriteRule ^(.*)/$  site.php?permalink=$1 [L]

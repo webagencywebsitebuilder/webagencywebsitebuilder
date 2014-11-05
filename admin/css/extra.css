@@ -1,0 +1,28 @@
+.white{
+background-color:white !important;
+border-top:1px solid #ccc;
+}
+
+.white a{
+color:#000000 !important;
+}
+
+
+.orange{
+background-color:#FF3333 !important;
+
+}
+
+.orange a{
+color:white !important;
+}
+
+
+
+.green{
+background-color:#006633 !important;
+}
+
+.green a{
+color:#fff !important;
+}
